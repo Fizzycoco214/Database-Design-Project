@@ -1,0 +1,36 @@
+Date:
+ -dateID (Primary Key)
+ -year
+ -month
+ -day
+End_Date:
+ -endDateID (Primary Key)
+ -dateID (Foreign Key)
+Match:
+ -matchID (Primary Key)
+ -roundID (Foreign Key)
+MatchPerformance:
+ -performanceId (Primary Key)
+ -matchID (Foreign Key)
+ -teamID (Foreign Key)
+ -placement
+ -eliminations
+Player:
+ -playerID (Primary Key)
+ -teamID (Foreign Key)
+ -name
+ -age
+ -nationality
+Round:
+ -roundID (Primary Key)
+ -tournamentID (Foreign Key)
+ -name
+Start_Date:
+ -startDateID (Primary Key)
+ -dateID (Foreign Key)
+Team:
+ -teamID (Primary Key)
+Tournament:
+ -tournamentID (Primary Key)
+
+Each foreign key is pointing to a superkey and no column is dependant on another so the database is BCNF.
